@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTraker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttv-UD-Sgn">
+                                <rect key="frame" x="36" y="40" width="88.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dxo-qQ-rO3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-OT-rgl">
+                                <rect key="frame" x="36" y="78" width="303" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ud0-bC-iJT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFV-n2-QHM">
+                                <rect key="frame" x="36" y="136" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yym-Bo-Q9v"/>
+                                </constraints>
+                                <state key="normal" title="Add to list"/>
+                                <connections>
+                                    <action selector="incrementArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VlI-ua-Zq2"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kyl-5d-epM">
+                                <rect key="frame" x="21" y="212" width="318" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" id="DpS-jm-S44">
+                                        <rect key="frame" x="0.0" y="28" width="318" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="DpS-jm-S44" id="8lm-Wn-9ce">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ttv-UD-Sgn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="03S-uc-x87"/>
+                            <constraint firstItem="mFV-n2-QHM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="FSw-b4-I0H"/>
+                            <constraint firstItem="WTP-OT-rgl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Goo-oj-2oO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kyl-5d-epM" secondAttribute="bottom" constant="20" id="Grm-T1-olb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WTP-OT-rgl" secondAttribute="trailing" constant="20" id="KfB-Tp-ehn"/>
+                            <constraint firstItem="ttv-UD-Sgn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="M3q-Aw-AUt"/>
+                            <constraint firstItem="WTP-OT-rgl" firstAttribute="top" secondItem="ttv-UD-Sgn" secondAttribute="bottom" constant="17" id="ScJ-ie-3zO"/>
+                            <constraint firstItem="Kyl-5d-epM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="aaO-nE-Eeg"/>
+                            <constraint firstItem="mFV-n2-QHM" firstAttribute="top" secondItem="WTP-OT-rgl" secondAttribute="bottom" constant="28" id="d5d-Gt-3y0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kyl-5d-epM" secondAttribute="trailing" constant="20" id="mbV-bc-IYT"/>
+                            <constraint firstItem="Kyl-5d-epM" firstAttribute="top" secondItem="mFV-n2-QHM" secondAttribute="bottom" constant="46" id="ntr-BI-DaY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addToList" destination="mFV-n2-QHM" id="dHh-Dt-SMY"/>
+                        <outlet property="mealName" destination="WTP-OT-rgl" id="7Zh-fy-1ax"/>
+                        <outlet property="tableView" destination="Kyl-5d-epM" id="ZTU-WK-5Zb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
